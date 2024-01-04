@@ -1,0 +1,391 @@
+body {
+    background-color: rgb(246, 249, 249);
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.container {
+    font-family: Geneva;
+    width: 100%;
+    height: 98vh;
+    display: grid;
+    grid-template-columns: 15px 208px 15px auto;
+    grid-template-rows: 30px auto;
+}
+
+#my-name {
+    font-size: 18pt;
+    font-weight: 900;
+    color: rgb(57, 57, 87);
+}
+
+a, #about-tab, #portfolio-tab {
+    font-size: small;
+    font-weight: 500;
+    color: grey;
+    text-decoration: none;
+}
+
+
+/* Navigation section */
+
+.navigation {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    text-align: center;
+    height: 100vh;
+    display: block;
+    border-right: solid rgba(184, 184, 184, 0.300) 0.5px;
+
+    /* box-sizing:border-box; */
+}
+
+.navigation .make-sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    align-self: start;
+}
+
+.navigation ul li a:hover {
+    color:rgb(184, 184, 184)
+}
+
+.navigation ul {
+    text-align: auto;
+    padding-left: 0vw;
+}
+
+.navigation ul li a {
+    display: inline-block;
+    padding: 0px 0.4vw;
+}
+
+
+/* Overall Site Content section */
+
+b {
+    color: #0b7295;
+}
+
+.site-content{
+    margin-left: 0px;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    width: 100%;
+    /* padding-right: 10%; */
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* About Me section */
+
+.tab-titles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    padding-top: 2vh;
+    border-left: solid rgb(184, 184, 184, 0.300) 0.5px;
+}
+
+.tab-links{
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #09bcf8;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 65%;
+}
+
+.tab-contents {
+    display: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* width: auto; */
+    grid-row-end: 3;
+    justify-content: center;
+    border-left: solid rgb(184, 184, 184, 0.300) 0.5px;
+
+}
+
+#me-content ul {
+    /* need to fix left buffer with window resize */
+    list-style-type: none;
+    /* margin-left: 10px; */
+    /* padding-left: 40px; */
+} */
+
+.tab-contents ul li {
+    list-style: none;
+}
+
+.tab-contents span {
+    color: rgb(159, 184, 154);
+    font-weight: bold;
+}
+
+.tab-contents.active-tab{
+    display: block;
+    padding-top: 6vh;
+    padding-right: 5%;
+    /* width: 50%; */
+    /* height: 100vh; */
+}
+
+
+/* Me tab contents */
+.collapsible-education {
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #8b8b8b;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 6px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.collapsible-training {
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #8b8b8b;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 6px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.collapsible-content {
+    padding: 0 6px;
+    display: none;
+    overflow: hidden;
+}
+
+.collapsible-education:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    float: right;
+    margin-left: 5px;
+}
+
+.collapsible-training:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    float: right;
+    margin-left: 5px;
+}
+  
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.collapsible-content ul {
+    padding-left: 0;
+}
+
+
+/* Development Tab */
+
+.collapsible-dev1 {
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-style: none;
+    /* border-bottom-width: 1px;
+    border-bottom-color: #8b8b8b; */
+    color: rgb(155, 164, 164);
+    cursor: pointer;
+    padding: 6px;
+    width: 25%;
+    text-align: center;
+    outline: none;
+    font-size: 13px;
+}
+
+.collapsible-dev1:after {
+    /* content: '\02795'; Unicode character for "plus" sign (+) */
+    content: '+';
+    font-size: 13.5px;
+    float: left;
+    margin-left: 1px;
+}
+
+.dev1-active:after {
+    /* content: "\2796";  Unicode character for "minus" sign (-) */
+    content: '-';
+}
+
+#dev1-readmore {
+    display: block;
+    margin-right: auto;
+    background-color: #d8d9d93a;
+    width: 355px;
+}
+
+/* Data Modeling Tab */
+
+.tab-contents .project-info {
+    /* border: 1px solid black; */
+    height: 400px;
+    width: 420px;
+    position: relative;
+    /* align-content: center; */
+    display: inline-block;
+    padding-left: 4em;
+    padding-right: none;
+    /* text-align: center; */
+    /* margin: 0 auto; */
+    /* overflow: hidden; */
+}
+
+.tab-contents .project-info img {
+    display: inline-block;
+}
+
+.tab-contents .project-info p {
+    position: relative;
+    text-align: center;
+    /* padding-top: 240px; */
+}
+
+h3 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.collapsible-project1 {
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-style: none;
+    /* border-bottom-width: 1px;
+    border-bottom-color: #8b8b8b; */
+    color: rgb(155, 164, 164);
+    cursor: pointer;
+    padding: 6px;
+    width: 25%;
+    text-align: center;
+    outline: none;
+    font-size: 13px;
+}
+
+.collapsible-project1:after {
+    /* content: '\02795'; Unicode character for "plus" sign (+) */
+    content: '+';
+    font-size: 13.5px;
+    float: left;
+    margin-left: 1px;
+}
+  
+.P1-active:after {
+    /* content: "\2796";  Unicode character for "minus" sign (-) */
+    content: '-';
+}
+
+/* #project1 {
+    text-align: center;
+} */
+
+#P1-readmore {
+    display: block;
+    margin-right: auto;
+    background-color: #d8d9d93a;
+    width: 355px;
+}
+
+.collapsible-project2 {
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-style: none;
+    /* border-bottom-width: 1px;
+    border-bottom-color: #8b8b8b; */
+    color: rgb(155, 164, 164);
+    cursor: pointer;
+    padding: 6px;
+    width: 25%;
+    text-align: center;
+    outline: none;
+    font-size: 13px;
+}
+
+.collapsible-project2:after {
+    /* content: '\02795'; Unicode character for "plus" sign (+) */
+    content: '+';
+    font-size: 13.5px;
+    float: left;
+    margin-left: 1px;
+}
+  
+.P2-active:after {
+    /* content: "\2796";  Unicode character for "minus" sign (-) */
+    content: '-';
+}
+
+.collapsible-project3 {
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-style: none;
+    /* border-bottom-width: 1px;
+    border-bottom-color: #8b8b8b; */
+    color: rgb(155, 164, 164);
+    cursor: pointer;
+    padding: 6px;
+    width: 25%;
+    text-align: center;
+    outline: none;
+    font-size: 13px;
+}
+
+.collapsible-project3:after {
+    /* content: '\02795'; Unicode character for "plus" sign (+) */
+    content: '+';
+    font-size: 13.5px;
+    float: left;
+    margin-left: 1px;
+}
+  
+.P3-active:after {
+    /* content: "\2796";  Unicode character for "minus" sign (-) */
+    content: '-';
+}
+
+
+
+/* Development Tab */
+
+
+/* GIS Tab */

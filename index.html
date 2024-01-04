@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width,user-scalable=no">
+  <script src="https://kit.fontawesome.com/710c769dc4.js" crossorigin="anonymous"></script>
+  <link href="index.css" rel="stylesheet"/>
+</head>
+
+<!-- PUBLISH THIS TO GITHUB!!!!! -->
+
+<body>
+  <div class="container">
+
+<!-- Navigation menu -->
+    <div class="item navigation">
+      <div class="make-sticky">
+        <div class="sub-item" id="my-name">Ihovanna Huezo</div>
+        <small id="current-role"><br>Junior Software Developer with a background on social research, <br>data collection and data modeling.</small><br><br><br>
+        <img class="sub-item selfie" src="../images/op6.png" width="" height="175"><br>
+        <ul class="sub-item nav-links" style="list-style-type:none;">
+          <li><br>
+            <a class="sub-item icon" href="" target="_blank"><i class="fa-sharp fa-regular fa-envelope fa-xl"></i></a>
+            <a class="sub-item icon" href="https://www.linkedin.com/in/ihovannahuezo" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+            <a class="sub-item icon" href="https://www.github.com/ihovanna" target="_blank"><i class ="fa-brands fa-github fa-xl"></i></a>
+            <br>
+            <a class="sub-item" id="portfolio-link" href="https://drive.google.com/file/d/14C_5ctyudsSX60itLv8xa1mSKo6aiqjM/view?usp=sharing" target="_blank">see my resume!</a>
+          </li>
+          <li><br></li>
+        </ul>
+      </div> <!--close .make-sticky-->
+    </div>
+    
+    <div class="site-content">
+<!-- About Me Section -->
+      <!-- <div class="site-content" id="about-me-container"> -->
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="openAboutTab('me-content')">Me</p>
+          <p class="tab-links" onclick="openAboutTab('development-content')">Software Development</p>
+          <p class="tab-links" onclick="openAboutTab('data-content')">Data Modeling</p>
+          <!-- <p class="tab-links" onclick="openAboutTab('GIS-content')">GIS</p> -->
+        </div>
+    
+        <div class="tab-contents active-tab" id="me-content">
+          <ul>
+            <p>
+              <b>Hi</b>! <br><br>
+              <b>Welcome</b>. This site showcases a few of my most relevant web development and data modeling
+              projects. Feel free to take a look, and don't hesitate to reach out with any questions!
+
+              <br><br>
+              Below you can read more about my training and education:
+            </p>
+
+            <button type="button" class="collapsible-education">
+              Sociology, B.A.
+            </button>
+            <div class="collapsible-content" id="education">
+              <ul><br>
+                <li><span>Humboldt State University</span>
+                  <br>Sociology B.A. | May 2017
+                  <br> Spanish Language Arts, B.A. | May 2017</li><br>
+                <li><span>Ada Developers Academy</span>
+                  <br>Full Stack Web Development (certification?) | July 2023</li><br>
+                <li><span>San Diego Mesa College</span>
+                  <br>Geographic Information Systems (GIS), A.A. | In progress</li><br>
+              </ul>
+            </div>
+
+            <script>
+              let collapseEducation = document.getElementsByClassName("collapsible-education");
+              let iEducation;
+
+              for (iEducation = 0; iEducation < collapseEducation.length; iEducation++) {
+                collapseEducation[iEducation].addEventListener("click", function() {
+                  this.classList.toggle("active");
+                  let content = this.nextElementSibling;
+                  if (content.style.display === "block") {
+                    content.style.display = "none";
+                  } else {
+                    content.style.display = "block";
+                  }
+                });
+              }
+            </script>
+
+            <button type="button" class="collapsible-training">
+              Full Stack Development
+            </button>
+            <div class="collapsible-content" id="training">
+              <br>Other content!
+            </div>
+
+            <script>
+              let collapseTraining = document.getElementsByClassName("collapsible-training");
+              let iTraining;
+
+              for (iTraining = 0; iTraining < collapseTraining.length; iTraining++) {
+              collapseTraining[iTraining].addEventListener("click", function() {
+                this.classList.toggle("active");
+                let content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+              }
+            </script>
+
+            <button type="button" class="collapsible-training">
+              Site Reliability Engineering (SRE) Support
+            </button>
+            <div class="collapsible-content" id="training">
+              <br>Other content!
+            </div>
+
+            <button type="button" class="collapsible-training">
+              Geographic Information Systems (GIS), A.A.
+            </button>
+            <div class="collapsible-content" id="training">
+              <br>Other content!
+            </div>
+          </ul>
+        </div>
+          
+        <div class="tab-contents" id="development-content">
+          <div class="project-info" id="box1">
+            <a href="https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=71922f26-c65c-40b9-8858-afaa0150858e&start=2247.881734" target="_blank">
+              <img class="img1" src="images/Hurricane Agatha Screenshot 250px.jpg" width="375px" height="250px">
+            </a>
+            <p>
+              <h3>Web App: Hurricane Agatha (Capstone)</h3>
+              <button type="button" class="collapsible-dev1">
+                read more
+              </button>
+              <div class="collapsible-content" id="dev1-readmore">
+                This is my first software development project description.
+                <br>--> do you want a collapsible window with more details?<--
+              </div>
+              <script>
+                let collapseDev1 = document.getElementsByClassName("collapsible-dev1");
+                let iDev1;
+  
+                for (iDev1 = 0; iDev1 < collapseDev1.length; iDev1++) {
+                  collapseDev1[iDev1].addEventListener("click", function() {
+                    this.classList.toggle("dev1-active");
+                    let content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                      content.style.display = "none";
+                    } else {
+                      content.style.display = "block";
+                    }
+                  });
+                }
+              </script>
+            </p>
+          </div>
+        </div>
+        
+        <div class="tab-contents" id="data-content">
+          <!-- When resizing browser, all items here should resize too. -->
+
+          <div class="project-info" id="project1">
+            <a href="https://drive.google.com/file/d/1OfMxaV71mnlDgs7MlNIo47saXafAwKgR/view?usp=sharing" target="_blank">
+              <img id="img1" src="images/Agua Dulce Thumbnail.png" width="375px" height="250px">
+            </a>
+            <p>
+              <h3>GIS: Agua Dulce Damage Assessment</h3>
+              <button type="button" class="collapsible-project1">
+                read more
+              </button>
+              <div class="collapsible-content" id="P1-readmore">
+                sample content
+              </div>
+              <script>
+                let collapseP1 = document.getElementsByClassName("collapsible-project1");
+                let iP1;
+  
+                for (iP1 = 0; iP1 < collapseP1.length; iP1++) {
+                  collapseP1[iP1].addEventListener("click", function() {
+                    this.classList.toggle("P1-active");
+                    let content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                      content.style.display = "none";
+                    } else {
+                      content.style.display = "block";
+                    }
+                  });
+                }
+              </script>
+            </p>
+          </div>
+          
+          <div class="project-info" id="project2">
+            <a href="https://drive.google.com/file/d/1p0_rGq9Tiwvfb9bx8muRoDwJrdhPey7N/view?usp=sharing" target="_blank">
+              <img id="img2" src="images/Final Project Thumbnail.jpg" width="375px" height="250px">
+            </a>
+            <p>
+              <h3>GIS: CA COVID-19 Vaccination Rate</h3>
+              <button type="button" class="collapsible-project2">
+                read more
+              </button>
+              <div class="collapsible-content">
+                sample content
+              </div>
+              <script>
+                let collapseP2 = document.getElementsByClassName("collapsible-project2");
+                let iP2;
+  
+                for (iP2 = 0; iP2 < collapseP2.length; iP2++) {
+                  collapseP2[iP2].addEventListener("click", function() {
+                    this.classList.toggle("P2-active");
+                    let content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                      content.style.display = "none";
+                    } else {
+                      content.style.display = "block";
+                    }
+                  });
+                }
+              </script>
+            </p>
+          </div>
+          
+          <div class="project-info" id="project3">
+            <a href="https://drive.google.com/file/d/1ACETplYdHBKxK9F11Ry9plHLFehlFoIu/view?usp=sharing" target="_blank">
+              <img id="img3" src="images/Final Exam Thumbnail.jpg" width="375px" height="250px">
+            </a>
+            <p>
+              <h3>GIS: Paradise Valley Trail Run (final exam) </h3>
+              <button type="button" class="collapsible-project3">
+                read more
+              </button>
+              <div class="collapsible-content">
+                sample content
+              </div>
+              <script>
+                let collapseP3 = document.getElementsByClassName("collapsible-project3");
+                let iP3;
+  
+                for (iP3 = 0; iP3 < collapseP3.length; iP3++) {
+                  collapseP3[iP3].addEventListener("click", function() {
+                    this.classList.toggle("P3-active");
+                    let content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                      content.style.display = "none";
+                    } else {
+                      content.style.display = "block";
+                    }
+                  });
+                }
+              </script>
+            </p>
+          </div>
+        </div>
+        
+
+        <script>
+          let tabLinks = document.getElementsByClassName("tab-links");
+          let tabContents = document.getElementsByClassName("tab-contents");
+    
+          function openAboutTab(tabName){
+            for (tabLink of tabLinks){
+              console.log(tabLinks)
+              tabLink.classList.remove("active-link")
+            }
+            for (tabContent of tabContents){
+              tabContent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabName).classList.add("active-tab");
+          }
+        </script>
+      <!-- </div> #about-me-container closing div -->
+      </div><!-- #portfolio-container closing div -->
+    </div> <!-- .site-content closing div -->
+  </div> <!-- .container closing div -->
+
+</body>
+</html>
