@@ -1,2 +1,2 @@
 # Personal Portfolio Site
-This portfolio site was creating solely using HTML, CSS, and JavaScript scripst as needed for animation.
+This portfolio site was creating solely using HTML, CSS, and JavaScript scripts as needed for animation.

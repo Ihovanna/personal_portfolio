@@ -77,7 +77,7 @@ b {
     grid-column-end: 5;
     width: 100%;
     /* padding-right: 10%; */
-    justify-content: center;
+    /* justify-content: center; */
     text-align: center;
 }
 
@@ -134,10 +134,11 @@ b {
     list-style: none;
 }
 
-.tab-contents span {
-    color: rgb(159, 184, 154);
+/* .tab-contents span {
+    color: #0b7295;
+    font-size: 25px;
     font-weight: bold;
-}
+} */
 
 .tab-contents.active-tab{
     display: block;
@@ -149,7 +150,7 @@ b {
 
 
 /* Me tab contents */
-.collapsible-education {
+.collapsible-sociology {
     background-color: transparent;
     border-top: none;
     border-left: none;
@@ -166,7 +167,41 @@ b {
     font-size: 15px;
 }
 
-.collapsible-training {
+.collapsible-development {
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #8b8b8b;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 6px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.collapsible-SRE {
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #8b8b8b;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 6px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.collapsible-GIS {
     background-color: transparent;
     border-top: none;
     border-left: none;
@@ -187,16 +222,31 @@ b {
     padding: 0 6px;
     display: none;
     overflow: hidden;
+    text-align: left;
 }
 
-.collapsible-education:after {
+.collapsible-sociology:after {
     content: '\02795'; /* Unicode character for "plus" sign (+) */
     font-size: 13px;
     float: right;
     margin-left: 5px;
 }
 
-.collapsible-training:after {
+.collapsible-development:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    float: right;
+    margin-left: 5px;
+}
+
+.collapsible-SRE:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    float: right;
+    margin-left: 5px;
+}
+
+.collapsible-GIS:after {
     content: '\02795'; /* Unicode character for "plus" sign (+) */
     font-size: 13px;
     float: right;
