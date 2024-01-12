@@ -183,8 +183,20 @@
                 read more
               </button>
               <div class="collapsible-content" id="dev1-readmore">
-                This is my first software development project description.
-                <br>--> do you want a collapsible window with more details?<--
+                <small><ul>
+                  <b>Timeline: </b>January-February 2023 (1 month)<br>
+                  <b>Technologies: </b>
+                    <li> - <u>Front end</u>: React.js & Google Maps API (JavaScript)</li>
+                    <li> - <u>Back end</u>: Firestore (Google Cloud Services)</li>
+                    <li> - <u>Deployment</u>: Heroku</li>
+                  <b>Goals: </b>
+                    <li>To generate an auxiliary web app that visually reflects Hurricane Agatha's (Mexico, May 2022) damage 
+                      assessment results by Hridaya Yoga's Community team in the community of Agua Dulce, Oaxaca, MX. </li>
+                    <li> - Feature a Google Map and connect it to Firestore noSQL database.</li>
+                    <li> - Markers in map are color coded based on data stored in Firestore database.</li>
+                    <li> - Markers feature an informational window on-click, which reflect data pertaining exclusively to the marker's ID.</li>
+                  <b>Constraints (business needs): </b><br>
+                </ul></small>
               </div>
               <script>
                 let collapseDev1 = document.getElementsByClassName("collapsible-dev1");
@@ -193,6 +205,50 @@
                 for (iDev1 = 0; iDev1 < collapseDev1.length; iDev1++) {
                   collapseDev1[iDev1].addEventListener("click", function() {
                     this.classList.toggle("dev1-active");
+                    let content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                      content.style.display = "none";
+                    } else {
+                      content.style.display = "block";
+                    }
+                  });
+                }
+              </script>
+            </p>
+          </div>
+
+          <div class="project-info" id="2">
+            <a href="" target="_blank">
+              <img class="img1" src="" width="375px" height="250px">
+            </a>
+            <p>
+              <h3>Skytap: Landing Zone Script</h3>
+              <button type="button" class="collapsible-dev2">
+                read more
+              </button>
+              <div class="collapsible-content" id="dev2-readmore">
+                <small><ul>
+                  <b>Timeline: </b>January-February 2023 (1 month)<br>
+                  <b>Technologies: </b>
+                    <li> - Python</li>
+                    <li> - Skytap Python API</li>
+                    <li> - Microsoft Azure ExpressRoutes</li>
+                  <b>Goals: </b>
+                    <li>To provide new customers with a programmatic option to set up a landing zone
+                      without the use of the Skytap UI prior to migration of their Legacy computing systems onto Skytap on Microsoft Azure.</li>
+                    <li> - Feature a Google Map and connect it to Firestore noSQL database.</li>
+                    <li> - Markers in map are color coded based on data stored in Firestore database.</li>
+                    <li> - Markers feature an informational window on-click, which reflect data pertaining exclusively to the marker's ID.</li>
+                  <b>Constraints (business needs): </b><br>
+                </ul></small>
+              </div>
+              <script>
+                let collapseDev2 = document.getElementsByClassName("collapsible-dev2");
+                let iDev2;
+  
+                for (iDev2 = 0; iDev2 < collapseDev2.length; iDev2++) {
+                  collapseDev2[iDev2].addEventListener("click", function() {
+                    this.classList.toggle("dev2-active");
                     let content = this.nextElementSibling;
                     if (content.style.display === "block") {
                       content.style.display = "none";

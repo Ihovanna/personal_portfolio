@@ -301,6 +301,16 @@ b {
     width: 355px;
 }
 
+/* #dev1-readmore ul {
+    list-style-type: circle;
+} */
+
+#dev1-readmore ul small li {
+    list-style-type: circle;
+    /* padding-left: 50px; */
+}
+
+
 /* Data Modeling Tab */
 
 .tab-contents .project-info {
